@@ -11,24 +11,33 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
+    
+    // MARK: - Atributos
     
     var delegate: AdicionaRefeicaoDelegate?
+    var itens = ["Molho de tomate", "Queijo", "Molho apimentado"]
+    
+    // MARK: - IBOutlets
     
     @IBOutlet var nomeTextField: UITextField?
     @IBOutlet var felicidadeTextField: UITextField?
-
+    
+    // MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itens.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celula = UITableViewCell(style: .default, reuseIdentifier: nil)
+        let linhaDaTabela = indexPath.row
+        celula.textLabel?.text = itens[linhaDaTabela]
+        return celula
+    }
+    
+    // MARK: - IBActions
+    
     @IBAction func adicionar() {
-//        if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTextField?.text {
-//            let nome = nomeDaRefeicao
-//            if let felicidade = Int(felicidadeDaRefeicao) {
-//                let refeicao = Refeicao(nome: nome, felicidade: felicidade)
-//                print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
-//            } else {
-//                print("erro ao tentar criar a refeição")
-//            }
-//        }
-        
         guard let nomeDaRefeicao = nomeTextField?.text else {
             return
         }
