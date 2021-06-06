@@ -10,6 +10,8 @@
 		FB5D049826682682000C7348 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D049726682682000C7348 /* Refeicao.swift */; };
 		FB5D049A26682CB8000C7348 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D049926682CB8000C7348 /* Item.swift */; };
 		FB5D04DF266C5552000C7348 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D04DE266C5552000C7348 /* RefeicoesTableViewController.swift */; };
+		FB5D04E2266D47AE000C7348 /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D04E0266D47AE000C7348 /* AdicionarItensViewController.swift */; };
+		FB5D04E3266D47AE000C7348 /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5D04E1266D47AE000C7348 /* AdicionarItensViewController.xib */; };
 		FB8D58922665B4A3008A2ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D58912665B4A3008A2ADD /* AppDelegate.swift */; };
 		FB8D58942665B4A3008A2ADD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D58932665B4A3008A2ADD /* SceneDelegate.swift */; };
 		FB8D58962665B4A3008A2ADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D58952665B4A3008A2ADD /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		FB5D049726682682000C7348 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		FB5D049926682CB8000C7348 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FB5D04DE266C5552000C7348 /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
+		FB5D04E0266D47AE000C7348 /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
+		FB5D04E1266D47AE000C7348 /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
 		FB8D588E2665B4A3008A2ADD /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8D58912665B4A3008A2ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB8D58932665B4A3008A2ADD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 		FB5D049C26682E13000C7348 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB5D04E0266D47AE000C7348 /* AdicionarItensViewController.swift */,
 				FB8D58952665B4A3008A2ADD /* ViewController.swift */,
 				FB5D04DE266C5552000C7348 /* RefeicoesTableViewController.swift */,
 			);
@@ -65,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				FB8D58972665B4A3008A2ADD /* Main.storyboard */,
+				FB5D04E1266D47AE000C7348 /* AdicionarItensViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 			files = (
 				FB8D589E2665B4A5008A2ADD /* LaunchScreen.storyboard in Resources */,
 				FB8D589B2665B4A5008A2ADD /* Assets.xcassets in Resources */,
+				FB5D04E3266D47AE000C7348 /* AdicionarItensViewController.xib in Resources */,
 				FB8D58992665B4A3008A2ADD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +179,7 @@
 			files = (
 				FB5D049A26682CB8000C7348 /* Item.swift in Sources */,
 				FB8D58962665B4A3008A2ADD /* ViewController.swift in Sources */,
+				FB5D04E2266D47AE000C7348 /* AdicionarItensViewController.swift in Sources */,
 				FB8D58922665B4A3008A2ADD /* AppDelegate.swift in Sources */,
 				FB5D04DF266C5552000C7348 /* RefeicoesTableViewController.swift in Sources */,
 				FB8D58942665B4A3008A2ADD /* SceneDelegate.swift in Sources */,
