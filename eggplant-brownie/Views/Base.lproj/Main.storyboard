@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X1T-BR-QiT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DdK-kg-SSZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Tla-N2-VK4">
+            <objects>
+                <navigationController id="DdK-kg-SSZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K4r-B3-0aa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="X1T-BR-QiT" kind="relationship" relationship="rootViewController" id="C0f-6o-7iN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLk-0D-avk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1478" y="115"/>
+        </scene>
         <!--Refeicoes Table View Controller-->
         <scene sceneID="nKM-1l-7Ts">
             <objects>
@@ -31,6 +47,13 @@
                             <outlet property="delegate" destination="X1T-BR-QiT" id="vK1-7l-dEJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="L7O-wh-toq">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="Pq0-9l-RZW">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="6L0-Xg-hl3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnf-7O-wHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,6 +116,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="II3-gV-39l"/>
                     <connections>
                         <outlet property="felicidadeTextField" destination="yFe-G6-35y" id="CBe-Q1-GRe"/>
                         <outlet property="nomeTextField" destination="cSW-M0-id3" id="cfZ-48-gYd"/>
@@ -100,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71.014492753623188" y="114.50892857142857"/>
+            <point key="canvasLocation" x="70" y="115"/>
         </scene>
     </scenes>
     <resources>
