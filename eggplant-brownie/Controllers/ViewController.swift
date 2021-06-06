@@ -11,7 +11,7 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Atributos
     
@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var felicidadeTextField: UITextField?
     
     // MARK: - UITableViewDataSource
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itens.count
     }
@@ -33,6 +34,21 @@ class ViewController: UIViewController, UITableViewDataSource {
         let linhaDaTabela = indexPath.row
         celula.textLabel?.text = itens[linhaDaTabela]
         return celula
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let celula = tableView.cellForRow(at: indexPath) else {
+            return
+        }
+        if celula.accessoryType == .none {
+            celula.accessoryType = .checkmark
+        } else {
+            celula.accessoryType = .none
+        }
+        
+        
     }
     
     // MARK: - IBActions
