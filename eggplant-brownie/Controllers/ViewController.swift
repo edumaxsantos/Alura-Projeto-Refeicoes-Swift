@@ -38,6 +38,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let botaoAdicionaItem = UIBarButtonItem(title: "adicionar", style: .plain, target: self, action: #selector(adicionarItem))
         
         navigationItem.rightBarButtonItem = botaoAdicionaItem
+        
+        guard let caminho = recuperaCaminho() else { return }
+        
+        do {
+            let dados = try Data(contentsOf: caminho)
+            guard let itensSalvos = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as? [Item] else { return }
+            itens = itensSalvos
+             
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     @objc func adicionarItem() {
