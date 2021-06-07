@@ -15,6 +15,7 @@
 		FB5D04E5266DA8C9000C7348 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D04E4266DA8C9000C7348 /* Alerta.swift */; };
 		FB5D04E7266DB39C000C7348 /* RemoveRefeicaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D04E6266DB39C000C7348 /* RemoveRefeicaoViewController.swift */; };
 		FB5D04E9266DCBF2000C7348 /* RefeicaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D04E8266DCBF2000C7348 /* RefeicaoDao.swift */; };
+		FB5D04EB266DCD44000C7348 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D04EA266DCD44000C7348 /* ItemDao.swift */; };
 		FB8D58922665B4A3008A2ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D58912665B4A3008A2ADD /* AppDelegate.swift */; };
 		FB8D58942665B4A3008A2ADD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D58932665B4A3008A2ADD /* SceneDelegate.swift */; };
 		FB8D58962665B4A3008A2ADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D58952665B4A3008A2ADD /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		FB5D04E4266DA8C9000C7348 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		FB5D04E6266DB39C000C7348 /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
 		FB5D04E8266DCBF2000C7348 /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
+		FB5D04EA266DCD44000C7348 /* ItemDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
 		FB8D588E2665B4A3008A2ADD /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8D58912665B4A3008A2ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB8D58932665B4A3008A2ADD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				FB5D049926682CB8000C7348 /* Item.swift */,
 				FB5D04E4266DA8C9000C7348 /* Alerta.swift */,
 				FB5D04E8266DCBF2000C7348 /* RefeicaoDao.swift */,
+				FB5D04EA266DCD44000C7348 /* ItemDao.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				FB5D049A26682CB8000C7348 /* Item.swift in Sources */,
 				FB8D58962665B4A3008A2ADD /* ViewController.swift in Sources */,
 				FB5D04E7266DB39C000C7348 /* RemoveRefeicaoViewController.swift in Sources */,
+				FB5D04EB266DCD44000C7348 /* ItemDao.swift in Sources */,
 				FB5D04E9266DCBF2000C7348 /* RefeicaoDao.swift in Sources */,
 				FB5D04E2266D47AE000C7348 /* AdicionarItensViewController.swift in Sources */,
 				FB8D58922665B4A3008A2ADD /* AppDelegate.swift in Sources */,
