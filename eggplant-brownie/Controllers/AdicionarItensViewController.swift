@@ -35,7 +35,7 @@ class AdicionarItensViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    // MARK - IBAction
+    // MARK: - IBAction
     @IBAction func adicionarItem(_ sender: Any) {
         guard let nome = nomeTextField.text else {
             return
@@ -47,5 +47,4 @@ class AdicionarItensViewController: UIViewController {
         delegate?.add(item)
         navigationController?.popViewController(animated: true)
     }
-    
 }

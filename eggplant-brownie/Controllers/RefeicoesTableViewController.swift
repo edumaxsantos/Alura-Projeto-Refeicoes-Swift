@@ -54,11 +54,7 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         tableView.reloadData()
         
         
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return
-        }
-        
-        let caminho = diretorio.appendingPathComponent("refeicao")
+        guard let caminho = recuperaCaminho() else { return }
         
         do {
             let dados = try NSKeyedArchiver.archivedData(withRootObject: refeicoes, requiringSecureCoding: false)
@@ -67,9 +63,16 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             print(error.localizedDescription)
         }
         
+    }
+    
+    func recuperaCaminho() -> URL? {
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return nil
+        }
         
+        let caminho = diretorio.appendingPathComponent("refeicao")
         
-        
+        return caminho
     }
     
     @objc func mostrarDetalhes(_ gesture: UILongPressGestureRecognizer) {
