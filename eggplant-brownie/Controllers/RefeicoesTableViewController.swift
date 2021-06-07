@@ -9,29 +9,10 @@ import UIKit
 
 class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDelegate {
     
-    var refeicoes = [Refeicao(nome: "Macarrão", felicidade: 4),
-                     Refeicao(nome: "Pizza", felicidade: 4),
-                     Refeicao(nome: "Comida Japonesa", felicidade: 5)]
+    var refeicoes: [Refeicao] = []
     
     override func viewDidLoad() {
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return
-        }
-        
-        let caminho = diretorio.appendingPathComponent("refeicao")
-        
-        do {
-            let dados = try Data(contentsOf: caminho)
-            guard let refeicoesSalvas =  try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as? Array<Refeicao> else {
-                return
-            }
-            
-            refeicoes = refeicoesSalvas
-            
-            
-        } catch {
-            print(error.localizedDescription)
-        }
+        refeicoes = RefeicaoDao().recupera()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,25 +35,8 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         tableView.reloadData()
         
         
-        guard let caminho = recuperaCaminho() else { return }
+        RefeicaoDao().save(refeicoes)
         
-        do {
-            let dados = try NSKeyedArchiver.archivedData(withRootObject: refeicoes, requiringSecureCoding: false)
-            try dados.write(to: caminho)
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-    }
-    
-    func recuperaCaminho() -> URL? {
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return nil
-        }
-        
-        let caminho = diretorio.appendingPathComponent("refeicao")
-        
-        return caminho
     }
     
     @objc func mostrarDetalhes(_ gesture: UILongPressGestureRecognizer) {
