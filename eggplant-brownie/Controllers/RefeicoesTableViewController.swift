@@ -42,13 +42,20 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             
             let alerta = UIAlertController(title: refeicao.nome, message: refeicao.detalhes(), preferredStyle: .alert)
             
-            let botaoCancelar = UIAlertAction(title: "ok", style: .cancel)
+            let botaoCancelar = UIAlertAction(title: "cancelar", style: .cancel)
             
             alerta.addAction(botaoCancelar)
+            
+            let botaoRemover = UIAlertAction(title: "remover", style: .destructive, handler: removeRefeicao)
+            alerta.addAction(botaoRemover)
             
             present(alerta, animated: true)
         }
         
+    }
+    
+    func removeRefeicao(alerta: UIAlertAction) {
+        print("Remover refeicao")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
